@@ -28,6 +28,7 @@ jobs:
       with:
         installDir: /opt/parasoft/cpptest
         input: build/compile_commands.json
+        commandLinePattern: '${cpptestcli} -compiler ${compilerConfig} -config ${testConfig} -report ${reportDir} -property report.format=xml,html,sarif -module . -input ${input}'
 
     - name: Upload results (Sarif)
       uses: github/codeql-action/upload-sarif@v1
