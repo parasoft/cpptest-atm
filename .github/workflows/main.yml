@@ -24,11 +24,10 @@ jobs:
       run: cmake --build build
 
     - name: Run C/C++test
-      uses: parasoft/run-cpptest-action@0.1.4-alpha
+      uses: parasoft/run-cpptest-action@0.1.5-alpha
       with:
         installDir: /opt/parasoft/cpptest
         input: build/compile_commands.json
-        commandLinePattern: '${cpptestcli} -compiler ${compilerConfig} -config ${testConfig} -report ${reportDir} -property report.format=xml,html,sarif -module . -input ${input}'
 
     - name: Upload results (Sarif)
       uses: github/codeql-action/upload-sarif@v1
