@@ -37,6 +37,7 @@ jobs:
       uses: parasoft/run-cpptest-action@0.1.7-alpha
       with:
         reportFormat: html,custom
+        testConfig: 'builtin://Flow Analysis Standard'
 
     # Upload analysis results in SARIF format, so they are available as GitHub code scanning alerts.
     - name: Upload results (SARIF)
