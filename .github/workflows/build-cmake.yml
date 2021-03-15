@@ -42,6 +42,7 @@ jobs:
       with:
         # For CMake-based projects, use compile_commands.json file as the input to analysis. 
         input: build/compile_commands.json
+        reportFormat: custom
 
     # Upload analysis results in SARIF format, so they are available as GitHub code scanning alerts.
     - name: Upload results (SARIF)
