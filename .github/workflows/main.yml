@@ -34,9 +34,10 @@ jobs:
     # Run code analysis with C/C++test.
     - name: Run C/C++test
       # Use dedicated 'run-cpptest-action' GitHub Action.
-      uses: parasoft/run-cpptest-action@0.1.7-alpha
+      uses: parasoft/run-cpptest-action@0.2.1-alpha
       with:
         reportFormat: html,custom
+        additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
         testConfig: 'builtin://Flow Analysis Standard'
 
     # Upload analysis results in SARIF format, so they are available as GitHub code scanning alerts.
