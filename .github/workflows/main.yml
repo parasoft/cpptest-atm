@@ -36,7 +36,7 @@ jobs:
       # Use dedicated 'run-cpptest-action' GitHub Action.
       uses: parasoft/run-cpptest-action@0.1.7-alpha
       with:
-        reportFormat: custom
+        reportFormat: html,custom
 
     # Upload analysis results in SARIF format, so they are available as GitHub code scanning alerts.
     - name: Upload results (SARIF)
