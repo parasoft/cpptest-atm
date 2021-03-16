@@ -34,7 +34,7 @@ jobs:
     # Run code analysis with C/C++test.
     - name: Run C/C++test
       # Use dedicated 'run-cpptest-action' GitHub Action.
-      uses: parasoft/run-cpptest-action
+      uses: parasoft/run-cpptest-action@0.2.1-alpha
       with:
         reportFormat: xml,html,custom
         additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
