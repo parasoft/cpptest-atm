@@ -42,6 +42,8 @@ jobs:
       with:
         # For CMake-based projects, use compile_commands.json file as the input to analysis. 
         input: build/compile_commands.json
+        reportFormat: html,xml,custom
+        additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
 
     # Upload analysis results in SARIF format, so they are available as GitHub code scanning alerts.
     - name: Upload results (SARIF)
