@@ -36,6 +36,7 @@ jobs:
       # Use dedicated 'run-cpptest-action' GitHub Action.
       uses: parasoft/run-cpptest-action@0.2.1-alpha
       with:
+        testConfig: 'builtin://Flow Analysis Standard'
         additionalParams: '-localsettings cpptestcli.properties'
         commandLinePattern: '${cpptestcli} -data ../wrk -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
 
