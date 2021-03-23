@@ -36,6 +36,7 @@ jobs:
       # Use dedicated 'run-cpptest-action' GitHub Action.
       uses: parasoft/run-cpptest-action@0.2.1-alpha
       with:
+        additionalParams: '-localsettings cpptestcli.properties'
         commandLinePattern: '${cpptestcli} -data ../wrk -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
 
     # Upload analysis results in SARIF format, so they are available as GitHub code scanning alerts.
