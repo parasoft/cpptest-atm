@@ -34,7 +34,7 @@ jobs:
     # Run code analysis with C/C++test.
     - name: Run C/C++test
       # Use dedicated 'run-cpptest-action' GitHub Action.
-      uses: parasoft/run-cpptest-action@0.2.1-alpha
+      uses: parasoft/run-cpptest-action@0.2.3-alpha
       with:
         testConfig: 'builtin://Flow Analysis Standard'
         additionalParams: '-localsettings cpptestcli.properties'
