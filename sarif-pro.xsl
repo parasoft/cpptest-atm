@@ -16,7 +16,7 @@
     <xsl:template match="/ResultsSession">
         <xsl:text>{ "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json", "version": "2.1.0", "runs": [ {</xsl:text>
         <xsl:text>"tool": { "driver": {</xsl:text>
-        <xsl:text>"name": "</xsl:text><xsl:value-of select="@toolName" /><xsl:text>",</xsl:text>
+        <xsl:text>"name": "C/C++test",</xsl:text>
         <xsl:text>"semanticVersion": "</xsl:text><xsl:value-of select="@toolVer" /><xsl:text>",</xsl:text>
         
         <xsl:text>"rules": [</xsl:text>
