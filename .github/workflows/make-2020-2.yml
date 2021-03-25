@@ -35,10 +35,10 @@ jobs:
     - name: Run C/C++test
       # Use dedicated 'run-cpptest-action' GitHub Action.
       uses: parasoft/run-cpptest-action@0.2.3-alpha
+      # Uncomment for C/C++test 2020.2 to generate SARIF report:
       with:
-        testConfig: 'builtin://Flow Analysis Standard'
-        additionalParams: '-localsettings cpptestcli.properties'
-        commandLinePattern: '${cpptestcli} -data ../wrk -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
+        reportFormat: xml,html,custom
+        additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
 
     # Upload analysis results in SARIF format, so they are available as GitHub code scanning alerts.
     - name: Upload results (SARIF)
