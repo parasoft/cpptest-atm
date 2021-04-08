@@ -2,13 +2,13 @@
 name: C/C++test with Make
 
 on:
-  # Trigger the workflow on push or pull request events but only for the master branch.
+  # Triggers the workflow on push or pull request events but only for the master branch.
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-  # Allow running this workflow manually from the Actions tab.
+  # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
@@ -22,31 +22,31 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job.
     steps:
 
-    # Check out your repository under $GITHUB_WORKSPACE, so that your job can access it.
+    # Checks out your repository under $GITHUB_WORKSPACE, so that your job can access it.
     - name: Checkout code
       uses: actions/checkout@v2
     
-    # Build your Make project - using 'cpptesttrace' to collect input data for the code analysis.
+    # Builds your Make project using 'cpptesttrace' to collect input data for code analysis.
     # Be sure 'cpptesttrace' is available on $PATH.
     - name: Build project
       run: cpptesttrace make clean all
 
-    # Run code analysis with C/C++test.
+    # Runs code analysis with C/C++test.
     - name: Run C/C++test
-      # Use dedicated 'run-cpptest-action' GitHub Action.
-      uses: parasoft/run-cpptest-action@0.2.3-alpha
-      # Uncomment for C/C++test 2020.2 to generate SARIF report:
-      with:
-        reportFormat: xml,html,custom
-        additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
+      # Use the 'run-cpptest-action' GitHub action.
+      uses: parasoft/run-cpptest-action@1.0.0
+      # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
+      # with:
+      #   reportFormat: xml,html,custom
+      #   additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
 
-    # Upload analysis results in SARIF format, so they are available as GitHub code scanning alerts.
+    # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
       uses: github/codeql-action/upload-sarif@v1
       with:
         sarif_file: reports/report.sarif
     
-    # Upload archive with all report files (.xml, .html, .sarif).
+    # Uploads an archive that includes all report files (.xml, .html, .sarif).
     - name: Archive reports
       uses: actions/upload-artifact@v2
       with:
