@@ -60,7 +60,7 @@ jobs:
     # See https://github.com/marketplace/actions/run-parasoft-c-c-test for more information.
     - name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
-      uses: parasoft/run-cpptest-action@1.0
+      uses: parasoft/run-cpptest-action@1.0.1
       with:
         # Compiler configuration - ensure you specify the configuration that matches your compiler.
         compilerConfig: gcc_9-64        
