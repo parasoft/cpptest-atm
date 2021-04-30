@@ -21,10 +21,10 @@ name: Parasoft C/C++test Code Analysis
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ master ]
+    branches: [ master, main ]
 
 jobs:
   run-cpptest:
@@ -60,7 +60,7 @@ jobs:
     # See https://github.com/marketplace/actions/run-parasoft-c-c-test for more information.
     - name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
-      uses: parasoft/run-cpptest-action@104f1c9cf6dbfd4b22e248a41d2e5a1e25e68b9e
+      uses: parasoft/run-cpptest-action@1.0.1
       with:
         # Compiler configuration - ensure you specify the configuration that matches your compiler.
         compilerConfig: gcc_9-64        
