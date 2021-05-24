@@ -75,7 +75,7 @@ jobs:
         # input: build/compile_commands.json 
         
         # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
-        # reportFormat: xml,html,custom
+        reportFormat: xml,html,custom
         additionalParams: '-fail -property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
