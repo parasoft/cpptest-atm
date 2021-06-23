@@ -1,7 +1,7 @@
 #include "BaseDisplay.hxx"
 #include <iostream>
 using namespace std;
-//
+
 void BaseDisplay::showInfoToUser(const char* message)
 {
     if (message)
