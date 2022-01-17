@@ -33,6 +33,7 @@ jobs:
     # Code analysis with Parasoft C/C++test requires a self-hosted runner
     # where Parasoft C/C++test is installed and properly licensed.
     runs-on: self-hosted
+    container: parasoft/cpptest:latest
 
     steps:
 
