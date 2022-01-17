@@ -7,6 +7,7 @@
 #include <string>
 using namespace std;
 
+
 class BaseDisplay;
 
 class ATM
