@@ -36,5 +36,7 @@ class ATM
         BaseDisplay* myDisplay;
 
 };
-
+void foo(int accountNumber, string password)
+{
+}
 #endif // ATM_HXX
