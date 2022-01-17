@@ -15,3 +15,6 @@ double Account::debit(double amount)
 void foo(int accountNumber, string password)
 {
 }
+void bar(int accountNumber, string password)
+{
+}
