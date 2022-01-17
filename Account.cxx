@@ -12,3 +12,6 @@ double Account::debit(double amount)
     myBalance -= amount;
     return (getBalance());
 }
+void foo(int accountNumber, string password)
+{
+}
