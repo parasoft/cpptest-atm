@@ -38,7 +38,7 @@ Account* Bank::addAccount()
     return userAccount;
 }
 
-void validatePass(int num, string password)
+void validatePass(int num, string& password)
 {
-    
+
 }
