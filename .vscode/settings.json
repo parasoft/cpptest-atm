@@ -1,4 +1,4 @@
 {
     "cpptest.compilerIdentifier": "gcc_10-64",
-    "cpptest.commandLinePattern": "docker run --rm -e PARASOFT_LS_URL=$PARASOFT_LS_URL -v ${workspaceFolder}:${workspaceFolder} -w ${workspaceFolder} parasoft/cpptest:preconfigured cpptestcli ${stopFile} ${compilerConfig} ${testConfig} ${reportDir} ${selectedFiles} -module . -trace make clean all"
+    "cpptest.commandLinePattern": "docker run --rm -v ${workspaceFolder}:${workspaceFolder} -w ${workspaceFolder} parasoft/cpptest:preconfigured cpptestcli ${stopFile} ${compilerConfig} ${testConfig} ${reportDir} ${selectedFiles} -module . -trace make clean all"
 }
