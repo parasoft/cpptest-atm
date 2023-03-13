@@ -1,4 +1,4 @@
 {
     "cpptest.compilerIdentifier": "gcc_10-64",
-    "cpptest.commandLinePattern": "docker run --rm -v ${workspaceFolder}:${workspaceFolder} -w ${workspaceFolder} parasoft/cpptest:preconfigured cpptestcli ${stopFile} ${compilerConfig} ${testConfig} ${reportDir} ${selectedFiles} -module . -trace make clean all"
+    "cpptest.commandLinePattern": "docker run --rm -v ${workspaceFolder}:${workspaceFolder} -w ${workspaceFolder} cpptest:latest cpptestcli ${stopFile} ${compilerConfig} ${testConfig} ${reportDir} ${selectedFiles} -module . -trace make clean all"
 }
