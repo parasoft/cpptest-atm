@@ -51,7 +51,7 @@ void ATM::withdraw(double amount)
     myDisplay->showBalance(bal);
 }
 
-void validatePassword(int id, string password)
+void validatePassword(int id, string& password)
 {
     // 
 }
