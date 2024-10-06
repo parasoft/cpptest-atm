@@ -1,9 +1,9 @@
 {
     "image": "cpptest-ct-std:latest",
-    "runArgs": [ "--rm" ]
-    // "customizations": {
-    //     "vscode": {
-    //         "extensions": ["parasoft.vscode-cpptest"]
-    //     }
-    // }
+    "runArgs": [ "--rm" ],
+    "customizations": {
+        "vscode": {
+            "extensions": ["ms-vscode.cpptools"]
+        }
+    }
 }
