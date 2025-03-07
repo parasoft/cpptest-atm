@@ -1,3 +1,4 @@
 {
     "cpptest.compilerIdentifier": "gcc_10-64",
+    "cpptest.testConfiguration": "builtin://MISRA C++ 2023",
 }
