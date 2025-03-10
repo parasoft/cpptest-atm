@@ -3,7 +3,7 @@
     "runArgs": [ "--rm" ],
     "customizations": {
         "vscode": {
-            "extensions": ["ms-vscode.cpptools"]
+            "extensions": ["ms-vscode.cpptools", "github.copilot-chat"]
         }
     }
 }
