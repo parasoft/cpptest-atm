@@ -3,7 +3,7 @@
     "runArgs": [ "--rm" ],
     "customizations": {
         "vscode": {
-            "extensions": ["ms-vscode.cpptools", "github.copilot-chat"]
+            "extensions": ["ms-vscode.cpptools", "github.copilot-chat", "matepek.vscode-catch2-test-adapter"]
         }
     }
 }

@@ -1,4 +1,6 @@
-.cpptest
+.build/
+.coverage/
+.cpptest/
+build/
+reports/
 cpptest.bdf
-build
-reports
