@@ -30,8 +30,8 @@ TEST(BankTest, TestGetAccount_getAccountPasswordInvalid) {
 //   Bank testBank;
 //   Account* newAccount = testBank.addAccount();
 //   newAccount->setPassword("passwd");
-//
-//   Account* testAccountValid = testBank.getAccount(newAccount->getAccountNumber() + 1, "qwerty");
-//
+
+//   Account* testAccountValid = testBank.getAccount(12345, "passwd");
+
 //   EXPECT_EQ(testAccountValid, nullptr);
 // }
