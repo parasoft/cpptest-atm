@@ -1,7 +1,7 @@
 {
     "cpptest.compilerIdentifier": "gcc_10-64",
     "cpptest.testConfiguration": "builtin://MISRA C++ 2023",
-    "cpptest.commandLinePattern": "cpptestcli ${stopFile} ${compilerConfig} ${testConfig} ${reportDir} ${selectedFiles} -exclude '*Test.cxx' -exclude '*/.build/*' -module . -input .build/compile_commands.json",
+    "cpptest.commandLinePattern": "cpptestcli ${stopFile} ${compilerConfig} ${testConfig} ${reportDir} ${selectedFiles} -module . -input .build/compile_commands.json",
     "cpptest.reportLocation": "${workspaceFolder}/reports/static",
     "testMate.cpp.test.advancedExecutables": [
         {

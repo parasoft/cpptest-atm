@@ -62,6 +62,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: CpptestReports
+        include-hidden-files: true
         path: |
           reports/
           .coverage/
